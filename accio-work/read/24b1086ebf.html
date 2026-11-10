@@ -1,0 +1,1363 @@
+<nav class="toc"><b>本包內容（3 個檔案）</b><div><a href="#f0">结构化商详/FAQ/SKILL.md</a><a href="#f1">结构化商详/商品图集/SKILL.md</a><a href="#f2">结构化商详/商品卖点黄金五段论/SKILL.md</a></div></nav><section class="bpart" id="f0"><h3 class="bpart-h">结构化商详/FAQ/SKILL.md</h3><div class="fm"><b>b2b-faq-generator</b><p>&gt;</p></div><h1>B2B 外貿 FAQ 知識庫生成技能</h1>
+<h2>核心身份定位</h2>
+<p>以以下雙重視角輸出所有內容：<br />
+- <strong>行業專家</strong>：擁有12年外貿實戰經驗，熟悉B2B國際貿易全流程（詢盤→報價→打樣→生產→清關→售後）<br />
+- <strong>TOP Sales話術提煉師</strong>：精通跨境買家溝通心理、客戶異議處理、成交逼單技巧</p>
+<hr />
+<h2>輸出標準</h2>
+<p>生成的 FAQ 必須滿足以下標準：<br />
+1. <strong>可直接用於訓練 AI 智慧接待</strong>（結構化、機讀性強）<br />
+2. <strong>中英雙語</strong>（每道題含完整的英文和中文版本）<br />
+3. <strong>200 道問答</strong>，覆蓋買家全購買旅程<br />
+4. <strong>置信度評估</strong>（三級：✅高置信 / ⚠️中置信 / ❌低置信）<br />
+5. <strong>輸出為 Excel 檔案</strong>（.xlsx），格式規範，可直接上傳系統</p>
+<hr />
+<h2>七大類別框架（固定結構）</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>類別</th>
+<th>編號範圍</th>
+<th>題目數</th>
+<th>核心覆蓋場景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>首次詢盤破冰類</td>
+<td>Q001-Q032</td>
+<td>32</td>
+<td>現貨/報價/MOQ/OEM/樣品/包裝/發貨方式</td>
+</tr>
+<tr>
+<td>2</td>
+<td>身份與資質驗證類</td>
+<td>Q033-Q056</td>
+<td>24</td>
+<td>認證/營業執照/工廠實力/專利/出口資質</td>
+</tr>
+<tr>
+<td>3</td>
+<td>產品技術諮詢類</td>
+<td>Q057-Q096</td>
+<td>40</td>
+<td>材質/工藝/引數/檢測/塗層/尺寸/定製</td>
+</tr>
+<tr>
+<td>4</td>
+<td>價格與商務條款類</td>
+<td>Q097-Q128</td>
+<td>32</td>
+<td>報價/付款/MOQ價格梯度/代理協議/模具費</td>
+</tr>
+<tr>
+<td>5</td>
+<td>質量與售後保障類</td>
+<td>Q129-Q152</td>
+<td>24</td>
+<td>質檢流程/AQL/質保/投訴處理/認證檔案</td>
+</tr>
+<tr>
+<td>6</td>
+<td>交期與物流協調類</td>
+<td>Q153-Q176</td>
+<td>24</td>
+<td>生產週期/分批發貨/物流方式/清關檔案</td>
+</tr>
+<tr>
+<td>7</td>
+<td>需求挖掘與增值銷售類</td>
+<td>Q177-Q200</td>
+<td>24</td>
+<td>市場洞察/聯合開發/營銷素材/戰略合作</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Excel 檔案規格</h2>
+<h3>Sheet 結構（共9個）</h3>
+<pre><code>Sheet 1: 📊 置信度彙總
+Sheet 2: Q001-Q032 首次詢盤破冰類
+Sheet 3: Q033-Q056 身份與資質驗證類
+Sheet 4: Q057-Q096 產品技術諮詢類
+Sheet 5: Q097-Q128 價格與商務條款類
+Sheet 6: Q129-Q152 質量與售後保障類
+Sheet 7: Q153-Q176 交期與物流協調類
+Sheet 8: Q177-Q200 需求挖掘與增值銷售類
+Sheet 9: ⚠️ 需處理條目
+</code></pre>
+<h3>22列欄位（固定順序）</h3>
+<pre><code>1.  序號
+2.  問題類別
+3.  問題編號（Q001、Q002…）
+4.  買家問題（英文）
+5.  買家問題（中文）
+6.  問題意圖分析
+7.  買家心理階段（認知/興趣/考量/意向/決策）
+8.  緊急程度（低/中/高）
+9.  回答複雜度（低/中/高）
+10. 核心回答（英文）—— TOP Sales 話術，100-200字，有引導成交意識
+11. 核心回答（中文）
+12. 延伸資訊（英文）
+13. 延伸資訊（中文）
+14. 引導動作（英文）—— 明確的下一步行動指引
+15. 引導動作（中文）
+16. 備選話術（英文）
+17. 備選話術（中文）
+18. 適用場景
+19. 置信等級（✅ / ⚠️ / ❌）
+20. 假設性資料描述
+21. 需替換欄位
+22. 建議真實資料
+</code></pre>
+<h3>置信度配色</h3>
+<ul>
+<li>✅ 高置信：綠色填充 <code>#C6EFCE</code>，約65%</li>
+<li>⚠️ 中置信：橙色填充 <code>#FFEB9C</code>，約20%</li>
+<li>❌ 低置信：紅色填充 <code>#FFC7CE</code>，約15%</li>
+</ul>
+<hr />
+<h2>置信度評級規則</h2>
+<table>
+<thead>
+<tr>
+<th>等級</th>
+<th>含義</th>
+<th>假設性資料描述列</th>
+<th>需替換欄位</th>
+<th>建議真實資料</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ 高置信</td>
+<td>行業通用知識，可直接使用</td>
+<td>無假設資料</td>
+<td>無</td>
+<td>無</td>
+</tr>
+<tr>
+<td>⚠️ 中置信</td>
+<td>含通用參考數值，建議替換為貴司真實資料</td>
+<td>說明哪些數值為參考值</td>
+<td>欄位名稱</td>
+<td>替換指引</td>
+</tr>
+<tr>
+<td>❌ 低置信</td>
+<td>含明確佔位符（如具體價格/認證編號/產能數字），必須替換</td>
+<td>說明原因</td>
+<td>欄位名稱</td>
+<td>替換指引</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>每條 FAQ 的內容質量要求</h2>
+<h3>核心回答（TOP Sales 話術標準）</h3>
+<p>英文和中文核心回答必須：<br />
+- <strong>有實質內容</strong>（100-200字），絕不使用"Thank you for your inquiry, we will get back to you"等套話<br />
+- <strong>體現專業性</strong>：運用行業術語、技術引數，展示產品知識深度<br />
+- <strong>建立信任</strong>：提供具體證據（認證/案例/資料）<br />
+- <strong>引導下一步</strong>：回答中自然埋入推動商機前進的鉤子<br />
+- <strong>解除顧慮</strong>：主動回應買家潛在的疑慮，而不是僅回答表面問題</p>
+<h3>引導動作（必須明確可執行）</h3>
+<p>每條 FAQ 的引導動作必須是具體的：<br />
+- ❌ 差：<code>Please contact us for more information.</code><br />
+- ✅ 好：<code>Please share the style reference or quantity, and I will send you the current stock list with photos within 2 hours.</code></p>
+<hr />
+<h2>執行步驟</h2>
+<h3>Step 1：確認產品與輸入方式</h3>
+<p>接收到使用者的產品名稱後，確認以下資訊（如使用者未提供則合理推斷）：<br />
+- <strong>產品名稱</strong>（如：太陽鏡、登山包、工業手套）<br />
+- <strong>主要目標市場</strong>（預設：歐美/全球市場）<br />
+- <strong>是否有參考模板</strong>（如使用者上傳了現有 FAQ 表格）</p>
+<h3>Step 2：規劃內容框架</h3>
+<p>在生成前，內部完成以下規劃：<br />
+1. 針對該產品的<strong>行業特有</strong>高頻詢盤點（如太陽鏡→UV400/偏光片/CE認證）<br />
+2. 該產品在<strong>合規認證</strong>方面的關鍵市場要求<br />
+3. 該產品常見的<strong>買家痛點</strong>（質量/交期/價格談判）<br />
+4. 該產品的<strong>技術引數體系</strong>（材質/工藝/測試標準）</p>
+<h3>Step 3：生成200道FAQ內容</h3>
+<p>按七大類別逐一生成，每類別內容要：<br />
+- <strong>問題多樣化</strong>：避免重複或過於相似的問法<br />
+- <strong>覆蓋不同買家畫像</strong>：新客首次諮詢、老客復購談判、大客戰略合作<br />
+- <strong>混合緊急程度</strong>：高/中/低比例約為30%/50%/20%</p>
+<h3>Step 4：生成 Excel 檔案</h3>
+<p>使用 Python（openpyxl）生成標準化 Excel 檔案：</p>
+<pre><code class="language-python">import openpyxl
+from openpyxl.styles import PatternFill, Font, Alignment, Border, Side
+from openpyxl.utils import get_column_letter
+import random
+
+wb = openpyxl.Workbook()
+
+# 顏色定義
+GREEN = PatternFill('solid', start_color='C6EFCE', end_color='C6EFCE')
+ORANGE = PatternFill('solid', start_color='FFEB9C', end_color='FFEB9C')
+RED = PatternFill('solid', start_color='FFC7CE', end_color='FFC7CE')
+HEADER_BLUE = PatternFill('solid', start_color='2E75B6', end_color='2E75B6')
+TITLE_DARK = PatternFill('solid', start_color='1F4E79', end_color='1F4E79')
+CONF_FILLS = {'✅': GREEN, '⚠️': ORANGE, '❌': RED}
+
+# 22列標題
+HEADERS = [
+    '序號', '問題類別', '問題編號',
+    '買家問題（英文）', '買家問題（中文）',
+    '問題意圖分析', '買家心理階段', '緊急程度', '回答複雜度',
+    '核心回答（英文）', '核心回答（中文）',
+    '延伸資訊（英文）', '延伸資訊（中文）',
+    '引導動作（英文）', '引導動作（中文）',
+    '備選話術（英文）', '備選話術（中文）',
+    '適用場景', '置信等級', '假設性資料描述', '需替換欄位', '建議真實資料'
+]
+
+# 列寬設定
+COL_WIDTHS = [8, 20, 12, 50, 40, 25, 15, 12, 12,
+              60, 50, 50, 40, 45, 35, 45, 35,
+              25, 12, 40, 25, 35]
+
+def setup_category_sheet(ws, title, headers, col_widths):
+    &quot;&quot;&quot;初始化每個類別sheet的標題行和列頭&quot;&quot;&quot;
+    # 大標題行（合併A1:V1）
+    ws.merge_cells('A1:V1')
+    ws['A1'] = title
+    ws['A1'].font = Font(bold=True, size=13, color='FFFFFF')
+    ws['A1'].fill = TITLE_DARK
+    ws['A1'].alignment = Alignment(horizontal='center', vertical='center')
+    ws.row_dimensions[1].height = 28
+
+    # 列標題行
+    for i, (h, w) in enumerate(zip(headers, col_widths), 1):
+        cell = ws.cell(2, i, h)
+        cell.font = Font(bold=True, color='FFFFFF', size=10)
+        cell.fill = HEADER_BLUE
+        cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+        ws.column_dimensions[get_column_letter(i)].width = w
+    ws.row_dimensions[2].height = 30
+
+def write_faq_rows(ws, faq_list, start_row=3):
+    &quot;&quot;&quot;寫入FAQ資料行&quot;&quot;&quot;
+    for i, row_data in enumerate(faq_list):
+        row_idx = start_row + i
+        for col_idx, value in enumerate(row_data, 1):
+            cell = ws.cell(row_idx, col_idx)
+            cell.value = value
+            cell.alignment = Alignment(wrap_text=True, vertical='center')
+        # 置信等級著色（第19列）
+        lvl = row_data[18]
+        if lvl in CONF_FILLS:
+            ws.cell(row_idx, 19).fill = CONF_FILLS[lvl]
+        ws.row_dimensions[row_idx].height = 80
+</code></pre>
+<p><strong>Sheet 格式要求：</strong><br />
+- 第1行：大標題（合併A1:V1），深藍背景，白字，高度28<br />
+- 第2行：22列標題，藍色背景，白字，高度30<br />
+- 第3行起：FAQ資料，行高80，所有單元格wrap_text=True<br />
+- 置信等級列（第19列）：根據值著對應顏色</p>
+<p><strong>置信度彙總 Sheet 格式：</strong></p>
+<pre><code>列：問題類別 | 編號範圍 | ✅ 高置信 | ⚠️ 中置信 | ❌ 低置信 | 需處理條目
+最後一行：合計行（加粗，淺藍底色）
+附註：置信度說明文字
+</code></pre>
+<p><strong>⚠️ 需處理條目 Sheet：</strong></p>
+<p>從所有類別中提取 <code>⚠️</code> 和 <code>❌</code> 條目，輸出以下欄位：<br />
+問題編號 | 問題類別 | 買家問題（中文）| 置信等級 | 假設性資料描述 | 需替換欄位 | 建議真實資料</p>
+<h3>Step 5：儲存檔案並彙報</h3>
+<ul>
+<li>預設儲存路徑：使用者桌面 <code>/Users/&lt;username&gt;/Desktop/[產品名]FAQ_200問置信度評估完整表格.xlsx</code></li>
+<li>生成完成後彙報：置信度分佈統計、各類別題目數量、需處理條目總數</li>
+</ul>
+<hr />
+<h2>產品適配指南</h2>
+<p>針對不同產品型別，需要調整以下內容：</p>
+<h3>消費品類（太陽鏡/服裝/鞋包）</h3>
+<ul>
+<li><strong>合規重點</strong>：CE、FDA、REACH/RoHS、BSCI</li>
+<li><strong>技術重點</strong>：材質、工藝、尺寸公差、顏色一致性</li>
+<li><strong>銷售重點</strong>：ODM/OEM、包裝定製、社媒營銷素材</li>
+</ul>
+<h3>工業品類（機械/五金/電子）</h3>
+<ul>
+<li><strong>合規重點</strong>：CE、UL、ISO、IP防護等級</li>
+<li><strong>技術重點</strong>：技術引數、公差、材料認證、測試報告</li>
+<li><strong>銷售重點</strong>：OEM、備件供應、技術支援</li>
+</ul>
+<h3>食品/農產品類</h3>
+<ul>
+<li><strong>合規重點</strong>：FDA、HACCP、有機認證、原產地</li>
+<li><strong>技術重點</strong>：成分、保質期、儲存條件、包裝規格</li>
+<li><strong>銷售重點</strong>：小批次試單、樣品政策、冷鏈物流</li>
+</ul>
+<hr />
+<h2>內容寫作規範示例</h2>
+<h3>✅ 高質量核心回答示例（以太陽鏡為例）</h3>
+<p><strong>買家問題</strong>：Do you offer OEM/ODM services?</p>
+<p><strong>核心回答（英文）</strong>：</p>
+<blockquote>
+<p>Yes, we offer both OEM and ODM services. For OEM: we manufacture to your exact specifications — your brand logo, custom frame color, lens tint, and packaging. For ODM: our in-house design team can develop exclusive styles from scratch based on your market brief. We protect your designs with NDAs. Many of our clients have successfully launched their own eyewear brands with our support.</p>
+</blockquote>
+<p><strong>引導動作（英文）</strong>：</p>
+<blockquote>
+<p>Are you looking to develop a new style or customize an existing frame? Please share your brand vision and I can connect you with our design team for a no-obligation consultation.</p>
+</blockquote>
+<h3>❌ 低質量回答示例（禁止出現）</h3>
+<blockquote>
+<p>Thank you for your interest in our products. We do offer OEM services. Please contact us for more details. We look forward to cooperating with you.</p>
+</blockquote>
+<hr />
+<h2>輸出檔案命名規則</h2>
+<pre><code>[產品名]FAQ_200問置信度評估完整表格.xlsx
+示例：太陽鏡FAQ_200問置信度評估完整表格.xlsx
+     運動襪FAQ_200問置信度評估完整表格.xlsx
+     工業手套FAQ_200問置信度評估完整表格.xlsx
+</code></pre>
+<hr />
+<h2>完成後彙報格式</h2>
+<p>生成完畢後，向使用者輸出以下摘要：</p>
+<pre><code>📄 檔案已生成：[檔案路徑]
+
+📊 置信度分佈：
+✅ 高置信：X 條（X%）
+⚠️ 中置信：X 條（X%）
+❌ 低置信：X 條（X%）
+⚠️ 需處理條目：X 條（見 Sheet9）
+
+📋 類別分佈：
+Q001-Q032 首次詢盤破冰類：32題
+Q033-Q056 身份與資質驗證類：24題
+Q057-Q096 產品技術諮詢類：40題
+Q097-Q128 價格與商務條款類：32題
+Q129-Q152 質量與售後保障類：24題
+Q153-Q176 交期與物流協調類：24題
+Q177-Q200 需求挖掘與增值銷售類：24題
+
+💡 使用建議：
+1. 優先處理 Sheet9「需處理條目」，將假設性資料替換為貴司真實資料
+2. 英文核心回答（Column J）可直接匯入阿里國際站智慧接待知識庫
+3. 引導動作（Column N）可作為業務員跟進話術參考
+</code></pre></section><section class="bpart" id="f1"><h3 class="bpart-h">结构化商详/商品图集/SKILL.md</h3><div class="fm"><b>alibaba-detail-image-generator</b><p>阿里巴巴國際站商品圖集生成技能。當使用者提供產品連結或產品名稱，要求生成"商品圖集"、"詳情頁圖片"、"產品圖"、"圖集"、"商品圖"時，必須使用此技能。自動判斷行業型別（非消費品B2B工業品 vs 消費品），匹配對應的30圖三段式框架，分批並行生成高質量商品圖，輸出可直接上傳至阿里國際站圖集模組的圖片組。觸發關鍵詞：商品圖集、詳情頁圖片、產品圖、圖集、做圖、生成圖、商品圖、幫我做圖、上傳圖片。</p></div><h1>阿里巴巴國際站商品圖集生成技能</h1>
+<h2>行業雙框架版 · 非消費品B2B + 消費品全覆蓋</h2>
+<p>本技能根據使用者提供的產品連結，自動抓取產品資訊，判斷行業型別，匹配對應的30圖三段式構圖框架，分批生成可直接上傳至阿里國際站圖集模組的高質量商品圖。</p>
+<hr />
+<h2>一、輸入模式判斷</h2>
+<p>收到使用者訊息後，判斷輸入型別：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">輸入型別</th>
+<th style="text-align: left;">處理方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>產品連結</strong>（alibaba.com / 1688 / 淘寶 / 天貓 / 獨立站）</td>
+<td style="text-align: left;">執行第二節抓取產品資訊</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>產品名稱 + 行業描述</strong></td>
+<td style="text-align: left;">跳過第二節，從第三節開始</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>已有產品資訊文字</strong></td>
+<td style="text-align: left;">跳過第二、三節，直接進入第四節</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>二、產品資訊抓取</h2>
+<p>使用 <code>web_fetch</code> 抓取產品連結，提取以下資訊：</p>
+<p><strong>基礎資訊</strong>：<br />
+- 產品名稱、型號、品類<br />
+- 產品材質 / 成分 / 原料<br />
+- 核心規格引數（尺寸、重量、厚度、容量等）<br />
+- 顏色 / 花色 / 款式數量<br />
+- 功能特點與賣點描述<br />
+- 認證資質（CE、GREENGUARD、OEKO-TEX、ISO 等）<br />
+- 定製服務（OEM/ODM、MOQ、打樣週期）<br />
+- 店鋪名稱與所屬行業</p>
+<p><strong>圖片資源</strong>：<br />
+- 使用 <code>see_image</code> 檢視產品已有圖片（主圖、細節圖、場景圖等），瞭解真實視覺資產<br />
+- 記錄哪些圖片可作為 <code>image_edit</code> 的參考底圖</p>
+<p>抓取完成後，輸出簡要確認：</p>
+<pre><code>【產品資訊確認】
+- 產品：xxx
+- 行業判斷：[非消費品B2B / 消費品] → 使用[框架A / 框架B]
+- 核心賣點：xxx
+- 已有圖片資產：xxx張（可作為底圖參考）
+</code></pre>
+<hr />
+<h2>三、行業型別判斷（關鍵節點）</h2>
+<p>根據產品品類自動判斷框架，<strong>無需使用者選擇</strong>：</p>
+<h3>框架A — 非消費品 / B2B工業品</h3>
+<p><strong>適用行業</strong>：建材（地板/板材/瓷磚/鋁材）、五金、工業零件、化工、機械裝置、電子元器件、工程材料、包裝材料等</p>
+<p><strong>核心目標</strong>：證明產品技術可靠、質量可控、供應鏈穩定，讓專業買家放心下單。</p>
+<p><strong>一句話要點</strong>："用資料和技術背書建立信任，用供應鏈實力消除採購風險。"</p>
+<h3>框架B — 消費品</h3>
+<p><strong>適用行業</strong>：服裝、家居、美妝、母嬰玩具、食品、運動戶外、寵物用品、禮品等</p>
+<p><strong>核心目標</strong>：激發買家對產品市場潛力的想象，證明產品能"好賣"，同時展示供應鏈的專業與可靠。</p>
+<p><strong>一句話要點</strong>："用視覺故事燃市場爆款潛力，用專業細節彰顯代工實力。"</p>
+<blockquote>
+<p>⚠️ 如行業判斷不確定，直接問使用者："這款產品主要賣給終端消費者（選B）還是企業/工廠/專案採購方（選A）？"</p>
+</blockquote>
+<hr />
+<h2>四、確認生成數量</h2>
+<p>詢問使用者本次需要生成多少張：</p>
+<pre><code>本次生成圖片數量：
+- 【A. 優先10張】第一部分完整（最常用，適合快速上新）
+- 【B. 全部20張】第一+第二部分（推薦標準版）
+- 【C. 全部30張】三部分完整版（旗艦款 / 重點產品）
+- 【D. 指定某幾張】告訴我具體圖號（如圖1、5、9）
+</code></pre>
+<p>使用者確認後進入第五節執行。</p>
+<hr />
+<h2>五、框架詳情與生成規範</h2>
+<h3>▌框架A — 非消費品B2B三段30圖</h3>
+<h4>第一部分：精準定義與應用展示（圖1-10）</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">圖號</th>
+<th style="text-align: left;">內容定義</th>
+<th style="text-align: left;">核心元素</th>
+<th style="text-align: left;">生成要點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">圖1</td>
+<td style="text-align: left;"><strong>產品主圖</strong> · 白底專業棚拍角度</td>
+<td style="text-align: left;">產品全貌、材質紋理、介面細節</td>
+<td style="text-align: left;">白底/淺灰底，30°斜角，突出質感與精度</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖2</td>
+<td style="text-align: left;"><strong>結構爆炸圖</strong> · 多層材料分解</td>
+<td style="text-align: left;">各層材料名稱標註、厚度資料</td>
+<td style="text-align: left;">分層展開檢視，每層附英文標註</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖3</td>
+<td style="text-align: left;"><strong>產品家族</strong> · 全系列型號展示</td>
+<td style="text-align: left;">所有SKU顏色/規格一覽</td>
+<td style="text-align: left;">網格排列，型號標註清晰</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖4</td>
+<td style="text-align: left;"><strong>核心引數規格表</strong> · 資料視覺化</td>
+<td style="text-align: left;">尺寸/厚度/重量/密度等關鍵資料</td>
+<td style="text-align: left;">表格+圖示結合，資料用大字號突出</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖5</td>
+<td style="text-align: left;"><strong>關鍵結構精密解析</strong> · 區域性放大</td>
+<td style="text-align: left;">鎖釦/接縫/五金/塗層等核心工藝</td>
+<td style="text-align: left;">放大鏡效果，標註公差/配合資料</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖6</td>
+<td style="text-align: left;"><strong>材料對比圖</strong> · 我們VS競品</td>
+<td style="text-align: left;">原料純度/成分/外觀對比</td>
+<td style="text-align: left;">左右分欄對比，我方佔視覺優勢</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖7</td>
+<td style="text-align: left;"><strong>應用場景圖A</strong> · 主力市場場景</td>
+<td style="text-align: left;">真實使用環境渲染（酒店/工廠/工程）</td>
+<td style="text-align: left;">高階真實感場景，產品自然融入</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖8</td>
+<td style="text-align: left;"><strong>應用場景圖B</strong> · 新興市場場景</td>
+<td style="text-align: left;">第二目標市場場景</td>
+<td style="text-align: left;">另一風格/地域的使用環境</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖9</td>
+<td style="text-align: left;"><strong>全球認證體系全景</strong> · 信任背書</td>
+<td style="text-align: left;">所有認證logo + 名稱 + 適用市場</td>
+<td style="text-align: left;">證書展示區，按市場分組排列</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖10</td>
+<td style="text-align: left;"><strong>一站式解決方案總圖</strong> · 價值主張</td>
+<td style="text-align: left;">產品線全景 + 服務流程 + 定製能力</td>
+<td style="text-align: left;">資訊圖表風格，覆蓋完整供應鏈</td>
+</tr>
+</tbody>
+</table>
+<h4>第二部分：深度技術與效能驗證（圖11-20）</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">圖號</th>
+<th style="text-align: left;">內容定義</th>
+<th style="text-align: left;">核心元素</th>
+<th style="text-align: left;">生成要點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">圖11</td>
+<td style="text-align: left;"><strong>關鍵部件細節圖A</strong> · 核心工藝區域性</td>
+<td style="text-align: left;">最具技術含量的部件放大</td>
+<td style="text-align: left;">工業攝影風格，精度感強</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖12</td>
+<td style="text-align: left;"><strong>關鍵部件細節圖B</strong> · 第二工藝點</td>
+<td style="text-align: left;">第二核心工藝細節</td>
+<td style="text-align: left;">標註關鍵尺寸或工藝引數</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖13</td>
+<td style="text-align: left;"><strong>關鍵部件細節圖C</strong> · 表面處理</td>
+<td style="text-align: left;">表面塗層/紋理/光澤度</td>
+<td style="text-align: left;">對比未處理品，突出工藝價值</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖14</td>
+<td style="text-align: left;"><strong>加工工藝圖A</strong> · 生產流程視覺化</td>
+<td style="text-align: left;">關鍵生產工序圖示</td>
+<td style="text-align: left;">流程圖風格，體現工廠自動化程度</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖15</td>
+<td style="text-align: left;"><strong>加工工藝圖B</strong> · 質檢流程</td>
+<td style="text-align: left;">QC檢測環節、檢測儀器、檢測資料</td>
+<td style="text-align: left;">實驗室/檢測線照片風格</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖16</td>
+<td style="text-align: left;"><strong>效能測試圖A</strong> · 核心效能資料</td>
+<td style="text-align: left;">防水/耐磨/承重/阻燃等主要測試</td>
+<td style="text-align: left;">測試場景圖 + 資料圖表</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖17</td>
+<td style="text-align: left;"><strong>效能測試圖B</strong> · 次要效能驗證</td>
+<td style="text-align: left;">環保/聲學/熱穩定性等補充測試</td>
+<td style="text-align: left;">資料視覺化，曲線圖或柱狀圖</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖18</td>
+<td style="text-align: left;"><strong>資質認證詳情A</strong> · 核心認證</td>
+<td style="text-align: left;">最重要認證證書掃描/展示</td>
+<td style="text-align: left;">證書實物照片 + 認證機構logo</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖19</td>
+<td style="text-align: left;"><strong>資質認證詳情B</strong> · 行業標準符合</td>
+<td style="text-align: left;">行業規範/標準符合性說明</td>
+<td style="text-align: left;">標準編號 + 測試報告摘要</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖20</td>
+<td style="text-align: left;"><strong>質量管理體系</strong> · ISO/工廠稽核</td>
+<td style="text-align: left;">ISO證書、工廠稽核報告、供應商資質</td>
+<td style="text-align: left;">正式檔案風格，權威感強</td>
+</tr>
+</tbody>
+</table>
+<h4>第三部分：供應鏈與合作保障（圖21-30）</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">圖號</th>
+<th style="text-align: left;">內容定義</th>
+<th style="text-align: left;">核心元素</th>
+<th style="text-align: left;">生成要點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">圖21</td>
+<td style="text-align: left;"><strong>定製化流程圖A</strong> · 設計階段</td>
+<td style="text-align: left;">從需求溝通到設計確認</td>
+<td style="text-align: left;">流程時間軸，強調響應速度</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖22</td>
+<td style="text-align: left;"><strong>定製化流程圖B</strong> · 打樣階段</td>
+<td style="text-align: left;">打樣→修改→確認週期</td>
+<td style="text-align: left;">打樣實物圖 + 時間節點</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖23</td>
+<td style="text-align: left;"><strong>定製化流程圖C</strong> · 量產交付</td>
+<td style="text-align: left;">量產→QC→包裝→發貨</td>
+<td style="text-align: left;">供應鏈全景，體現穩定性</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖24</td>
+<td style="text-align: left;"><strong>專業包裝圖A</strong> · 標準包裝</td>
+<td style="text-align: left;">產品包裝展開圖、保護設計</td>
+<td style="text-align: left;">包裝實物圖，強調防損設計</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖25</td>
+<td style="text-align: left;"><strong>專業包裝圖B</strong> · 定製包裝</td>
+<td style="text-align: left;">OEM包裝案例、品牌定製示例</td>
+<td style="text-align: left;">私標包裝效果圖</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖26</td>
+<td style="text-align: left;"><strong>核心裝置圖A</strong> · 主力生產裝置</td>
+<td style="text-align: left;">關鍵生產裝置型號、數量、產能</td>
+<td style="text-align: left;">工廠實拍或裝置渲染圖</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖27</td>
+<td style="text-align: left;"><strong>核心裝置圖B</strong> · 檢測裝置</td>
+<td style="text-align: left;">實驗室檢測儀器</td>
+<td style="text-align: left;">專業檢測場景，體現研發實力</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖28</td>
+<td style="text-align: left;"><strong>核心裝置圖C</strong> · 工廠全景</td>
+<td style="text-align: left;">生產線全貌、廠房規模</td>
+<td style="text-align: left;">航拍或全景圖，數字標註面積/產能</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖29</td>
+<td style="text-align: left;"><strong>專案案例圖</strong> · 已交付客戶案例</td>
+<td style="text-align: left;">真實客戶專案照片 + 客戶所在國旗幟</td>
+<td style="text-align: left;">地圖熱點圖 + 專案實景</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖30</td>
+<td style="text-align: left;"><strong>行動號召圖</strong> · CTA收尾</td>
+<td style="text-align: left;">聯絡方式、Trade Assurance、下單引導</td>
+<td style="text-align: left;">強CTA設計，橙色按鈕風格</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>▌框架B — 消費品三段30圖</h3>
+<h4>第一部分：引爆市場吸引力（圖1-10）</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">圖號</th>
+<th style="text-align: left;">內容定義</th>
+<th style="text-align: left;">核心元素</th>
+<th style="text-align: left;">生成要點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">圖1</td>
+<td style="text-align: left;"><strong>場景圖A</strong> · 核心生活方式場景</td>
+<td style="text-align: left;">產品在最理想使用場景中自然呈現</td>
+<td style="text-align: left;">高顏值生活場景，目標消費者出現</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖2</td>
+<td style="text-align: left;"><strong>場景圖B</strong> · 第二生活方式場景</td>
+<td style="text-align: left;">另一使用場景或情緒氛圍</td>
+<td style="text-align: left;">不同光線/空間/季節，拓展想象空間</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖3</td>
+<td style="text-align: left;"><strong>場景圖C</strong> · 節日/禮品/特殊場景</td>
+<td style="text-align: left;">節日氛圍或禮品包裝場景</td>
+<td style="text-align: left;">節日感強，適合旺季備貨決策</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖4</td>
+<td style="text-align: left;"><strong>模特圖A</strong> · 主力款正面展示</td>
+<td style="text-align: left;">模特/道具完整展示產品</td>
+<td style="text-align: left;">正面全身/整體視角，突出款式</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖5</td>
+<td style="text-align: left;"><strong>模特圖B</strong> · 側面/背面/細節角度</td>
+<td style="text-align: left;">產品從不同角度完整呈現</td>
+<td style="text-align: left;">多角度輪播邏輯，減少退貨率</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖6</td>
+<td style="text-align: left;"><strong>模特圖C</strong> · 使用狀態/動態展示</td>
+<td style="text-align: left;">模特使用產品的動作畫面</td>
+<td style="text-align: left;">動態感，激發消費者代入感</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖7</td>
+<td style="text-align: left;"><strong>賣點功能圖A</strong> · 核心功能視覺化</td>
+<td style="text-align: left;">產品最重要功能的圖示說明</td>
+<td style="text-align: left;">功能圖示 + 簡短文字，一目瞭然</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖8</td>
+<td style="text-align: left;"><strong>賣點功能圖B</strong> · 差異化功能</td>
+<td style="text-align: left;">區別於競品的獨特功能</td>
+<td style="text-align: left;">對比設計，突出我方優勢</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖9</td>
+<td style="text-align: left;"><strong>系列圖A</strong> · 顏色/款式系列全覽</td>
+<td style="text-align: left;">所有可選顏色/款式排列</td>
+<td style="text-align: left;">色板網格，讓買家看到SKU豐富度</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖10</td>
+<td style="text-align: left;"><strong>系列圖B</strong> · 搭配/套裝組合</td>
+<td style="text-align: left;">產品搭配方案或套裝組合</td>
+<td style="text-align: left;">搭配效果圖，提升客單價想象</td>
+</tr>
+</tbody>
+</table>
+<h4>第二部分：彰顯品質與專業（圖11-20）</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">圖號</th>
+<th style="text-align: left;">內容定義</th>
+<th style="text-align: left;">核心元素</th>
+<th style="text-align: left;">生成要點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">圖11</td>
+<td style="text-align: left;"><strong>產品細節圖A</strong> · 核心工藝細節</td>
+<td style="text-align: left;">最重要的工藝/材質區域性放大</td>
+<td style="text-align: left;">微距風格，質感真實感強</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖12</td>
+<td style="text-align: left;"><strong>產品細節圖B</strong> · 功能性細節</td>
+<td style="text-align: left;">功能性結構/介面/配件細節</td>
+<td style="text-align: left;">標註說明，消除買家顧慮</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖13</td>
+<td style="text-align: left;"><strong>產品細節圖C</strong> · 表面/紋理細節</td>
+<td style="text-align: left;">面料/材質/塗層/印花細節</td>
+<td style="text-align: left;">觸感可感知的視覺呈現</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖14</td>
+<td style="text-align: left;"><strong>產品細節圖D</strong> · 標籤/吊牌/logo</td>
+<td style="text-align: left;">品牌標籤、洗滌標、合格證</td>
+<td style="text-align: left;">合規性展示，減少買家驗證成本</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖15</td>
+<td style="text-align: left;"><strong>材質圖</strong> · 原料/成分來源</td>
+<td style="text-align: left;">原料實物/產地/成分說明</td>
+<td style="text-align: left;">溯源感，滿足ESG採購需求</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖16</td>
+<td style="text-align: left;"><strong>材質對比圖</strong> · 我方VS競品材質</td>
+<td style="text-align: left;">材質手感/外觀/耐久度對比</td>
+<td style="text-align: left;">左右對比，直觀體現品質差距</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖17</td>
+<td style="text-align: left;"><strong>尺碼圖</strong> · 完整尺碼規格</td>
+<td style="text-align: left;">尺碼錶、測量方式、適用人群</td>
+<td style="text-align: left;">清晰資料，減少因尺碼問題的退貨</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖18</td>
+<td style="text-align: left;"><strong>尺碼對比圖</strong> · 多尺碼實物對比</td>
+<td style="text-align: left;">不同尺碼/規格產品並排展示</td>
+<td style="text-align: left;">消除買家對尺碼的不確定感</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖19</td>
+<td style="text-align: left;"><strong>對比圖A</strong> · 使用前後對比</td>
+<td style="text-align: left;">產品使用效果的前後對比</td>
+<td style="text-align: left;">效果驗證，強化購買信心</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖20</td>
+<td style="text-align: left;"><strong>對比圖B</strong> · 競品橫向對比</td>
+<td style="text-align: left;">與競品在關鍵維度的差異</td>
+<td style="text-align: left;">資料或視覺對比，突出價效比</td>
+</tr>
+</tbody>
+</table>
+<h4>第三部分：定製&amp;服務能力（圖21-30）</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">圖號</th>
+<th style="text-align: left;">內容定義</th>
+<th style="text-align: left;">核心元素</th>
+<th style="text-align: left;">生成要點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">圖21</td>
+<td style="text-align: left;"><strong>定製案例圖A</strong> · Logo定製</td>
+<td style="text-align: left;">Logo/印花定製案例實物展示</td>
+<td style="text-align: left;">真實定製效果圖，消除買家疑慮</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖22</td>
+<td style="text-align: left;"><strong>定製案例圖B</strong> · 顏色定製</td>
+<td style="text-align: left;">顏色/花色定製色卡及實物</td>
+<td style="text-align: left;">色板 + 實物對應，展示還原度</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖23</td>
+<td style="text-align: left;"><strong>定製案例圖C</strong> · 結構/尺寸定製</td>
+<td style="text-align: left;">尺寸/款式/結構定製能力</td>
+<td style="text-align: left;">定製規格圖，附MOQ說明</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖24</td>
+<td style="text-align: left;"><strong>包裝方案圖A</strong> · 標準包裝展示</td>
+<td style="text-align: left;">產品包裝完整展示</td>
+<td style="text-align: left;">包裝開箱效果，強調儀式感</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖25</td>
+<td style="text-align: left;"><strong>包裝方案圖B</strong> · OEM包裝定製</td>
+<td style="text-align: left;">私標包裝案例</td>
+<td style="text-align: left;">品牌定製包裝效果圖</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖26</td>
+<td style="text-align: left;"><strong>產線實拍圖A</strong> · 生產現場</td>
+<td style="text-align: left;">生產車間實拍</td>
+<td style="text-align: left;">真實感強，證明非貿易商</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖27</td>
+<td style="text-align: left;"><strong>產線實拍圖B</strong> · 質檢現場</td>
+<td style="text-align: left;">QC檢測環節實拍</td>
+<td style="text-align: left;">檢測流程圖，增加專業感</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖28</td>
+<td style="text-align: left;"><strong>產線實拍圖C</strong> · 工廠規模</td>
+<td style="text-align: left;">廠房全景、裝置陣列</td>
+<td style="text-align: left;">規模感，打消買家對產能的顧慮</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖29</td>
+<td style="text-align: left;"><strong>證書/品牌牆</strong> · 認證與榮譽</td>
+<td style="text-align: left;">所有認證證書、品牌合作、獎項</td>
+<td style="text-align: left;">信任背書集中展示</td>
+</tr>
+<tr>
+<td style="text-align: left;">圖30</td>
+<td style="text-align: left;"><strong>行動號召圖</strong> · CTA收尾</td>
+<td style="text-align: left;">聯絡引導、樣品政策、Trade Assurance</td>
+<td style="text-align: left;">強CTA，降低詢盤門檻</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>六、圖片生成執行規範</h2>
+<h3>6.1 生成工具選擇</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">情況</th>
+<th style="text-align: left;">使用工具</th>
+<th style="text-align: left;">說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">有產品真實圖片可作底圖</td>
+<td style="text-align: left;"><code>image_edit</code></td>
+<td style="text-align: left;">優先使用，保留真實產品外觀</td>
+</tr>
+<tr>
+<td style="text-align: left;">無合適底圖，需要全新生成</td>
+<td style="text-align: left;"><code>image_generate</code></td>
+<td style="text-align: left;">按prompt規範生成</td>
+</tr>
+<tr>
+<td style="text-align: left;">需要在已有圖上疊加文字/資料</td>
+<td style="text-align: left;"><code>image_edit</code></td>
+<td style="text-align: left;">task_type: complex_generation</td>
+</tr>
+</tbody>
+</table>
+<h3>6.2 image_generate 引數規範</h3>
+<pre><code>- task_type：complex（含文字標註/多元素）或 simple（純產品渲染）
+- aspect_ratio：1:1（國際站詳情圖示準）
+</code></pre>
+<h3>6.3 Prompt 撰寫模板</h3>
+<p><strong>框架A（B2B工業品）prompt風格</strong>：</p>
+<pre><code>Professional product photography / industrial design render of [產品名稱].
+[具體圖片內容描述：角度、細節、標註內容].
+Style: clean industrial, white or light gray background, Montserrat Bold labels,
+color scheme: steel blue #1F3A5F + safety orange #FF6F00 + white.
+Text on image: [具體英文文字，逐字列出].
+High resolution, B2B commercial quality.
+</code></pre>
+<p><strong>框架B（消費品）prompt風格</strong>：</p>
+<pre><code>Lifestyle product photography of [產品名稱].
+[具體圖片內容描述：場景、模特、氛圍、角度].
+Style: [warm/bright/minimal/festive], natural lighting, [場景描述].
+Color palette: [根據產品主色調定義].
+Text overlay: [具體英文文字，如有].
+High resolution, e-commerce commercial quality, editorial feel.
+</code></pre>
+<h3>6.4 文字內容規範</h3>
+<ul>
+<li>所有圖片上的文字必須<strong>完整逐字寫入prompt</strong>，不得用"add some text"代替</li>
+<li>主標題用 Montserrat Bold（B2B）或 Playfair Display / Raleway（消費品）</li>
+<li>數字/認證/技術引數保留英文原文</li>
+<li>每張圖文字量控制：標題1行 + 副標題1行 + 資料標註若干，不超過5個文字區塊</li>
+</ul>
+<h3>6.5 自檢規範（生成後必須執行）</h3>
+<p>每張圖生成後立即呼叫 <code>see_image</code> 自檢，檢查：<br />
+- [ ] 文字是否清晰無亂碼<br />
+- [ ] 產品主體是否完整、無變形<br />
+- [ ] 顏色風格是否統一<br />
+- [ ] 關鍵資料是否準確呈現</p>
+<p>若發現文字錯誤，立刻切換策略：<strong>放棄修改，重新生成並在prompt中極度精確地描述文字內容</strong>。</p>
+<h3>6.6 並行生成策略</h3>
+<ul>
+<li>每次最多<strong>4張並行</strong>生成（避免超時）</li>
+<li>生成順序：圖1-4 → 圖5-8 → 圖9-10（若10張）</li>
+<li>每批完成後，彙報進度並展示圖片，詢問是否繼續下一批</li>
+</ul>
+<hr />
+<h2>七、輸出格式</h2>
+<p>每張圖生成完成後，按以下格式輸出：</p>
+<pre><code>#### 圖X｜[圖片名稱]
+&gt; **定位**：[一句話說明用途]
+![圖X](圖片URL)
+[簡短說明：構圖邏輯、文字內容、建議使用位置]
+</code></pre>
+<p>全部完成後，彙總輸出圖片目錄：</p>
+<pre><code>## 圖集交付清單
+
+| 圖號 | 名稱 | URL | 狀態 |
+|:---|:---|:---|:---|
+| 圖1 | xxx | [連結] | ✅ |
+| 圖2 | xxx | [連結] | ✅ |
+...
+</code></pre>
+<p>並將所有圖片URL儲存為 Markdown 檔案，檔名格式：<code>[產品名]-商品圖集-[日期].md</code></p>
+<hr />
+<h2>八、完成後追問</h2>
+<p>圖集全部交付後，主動提供以下選項：</p>
+<blockquote>
+<p>"圖集已完成 ✓ 接下來可以：<br />
+- <strong>A. 生成配套商品賣點文案</strong>（黃金五段論，可直接填入國際站賣點框）<br />
+- <strong>B. 繼續生成下一部分圖片</strong>（如已完成圖1-10，繼續圖11-20）<br />
+- <strong>C. 針對另一款產品生成圖集</strong>（複用同一框架）<br />
+- <strong>D. 用真實工廠/產品圖片重做關鍵圖片</strong>（提供真實圖後用image_edit升級）"</p>
+</blockquote>
+<hr />
+<h2>九、執行規範</h2>
+<ol>
+<li><strong>行業判斷優先</strong>：進入第四節前必須完成行業判斷，框架選擇錯誤會導致整批圖片定位偏差</li>
+<li><strong>資料誠實性</strong>：圖片中的所有數字/認證/客戶數量必須來自使用者提供或連結抓取的真實資訊，無法確認的用「[待核實]」佔位，絕不捏造</li>
+<li><strong>真實圖優先</strong>：如使用者提供了真實產品圖/工廠圖，必須用 <code>image_edit</code> 處理，不要用AI全新生成替代真實圖</li>
+<li><strong>風格統一</strong>：同一批次圖片必須使用同一色彩系統，不得中途改變主色調</li>
+<li><strong>進度透明</strong>：每完成一批圖片，必須展示成果並告知下一步，不要靜默處理</li>
+<li><strong>文字自檢</strong>：每張圖必須 <code>see_image</code> 確認無亂碼，發現問題立刻重新生成（最多重試2次，超過則跳過並標註「待人工處理」）</li>
+<li><strong>字型一致性</strong>：B2B框架統一使用 Montserrat Bold 標題 + Inter 正文；消費品框架標題字型根據產品風格選擇（甜美用手寫體/高階用襯線/運動用無襯線粗體）</li>
+</ol></section><section class="bpart" id="f2"><h3 class="bpart-h">结构化商详/商品卖点黄金五段论/SKILL.md</h3><div class="fm"><b>golden-5-paragraph-ksp</b><p>阿里巴巴國際站「商品賣點黃金五段論」生成技能。當使用者提到"商品賣點"、"產品賣點"、"KSP"、"黃金五段"、"寫產品文案"、"產品描述"、"商詳文案"、"五段論"、"CVP/KSP/ICP/TSP/CTA"，或提供了產品連結/產品名稱要求輸出國際站賣點文案時，必須使用此技能。支援三種輸入模式：(1) 提供產品連結，(2) 提供產品名稱+行業，(3) 使用者已有產品資訊直接貼上。輸出嚴格遵循「CVP→KSP→ICP→TSP→CTA」五段結構，中英雙語，英文版字元總量控制在2000字元以內，可直接複製貼上至阿里國際站商品賣點填寫框。行業通用版本，覆蓋建材、家居、服裝、電子、工業、化工、食品、美妝等所有出口行業。</p></div><h1>商品賣點黃金五段論生成技能</h1>
+<h2>阿里巴巴國際站通用版 · 行業全覆蓋</h2>
+<p>本技能面向<strong>阿里巴巴國際站 ToB 商家</strong>，根據產品資訊生成一份符合「商品賣點黃金五段方法論」的高轉化英文商品賣點文案，可直接填入國際站商品賣點模組（≤2000字元）。</p>
+<hr />
+<h2>一、判斷輸入模式</h2>
+<p>收到使用者訊息後，首先判斷屬於以下哪種模式：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>觸發條件</th>
+<th>執行路徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. 連結模式</strong></td>
+<td>使用者提供了產品/店鋪連結</td>
+<td>執行第二節 → 第三節 → 第四節</td>
+</tr>
+<tr>
+<td><strong>B. 描述模式</strong></td>
+<td>使用者說了產品名稱或描述，無連結</td>
+<td>跳過第二節，從第三節開始</td>
+</tr>
+<tr>
+<td><strong>C. 資訊貼上模式</strong></td>
+<td>使用者直接貼上了產品規格/特點文字</td>
+<td>跳過第二、三節，直接進入第四節</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>二、產品資訊讀取（連結模式）</h2>
+<p>使用 <code>web_fetch</code> 抓取產品連結頁面，提取以下資訊：</p>
+<ul>
+<li><strong>產品名稱與型號</strong></li>
+<li><strong>產品材質 / 成分 / 原料</strong></li>
+<li><strong>核心規格引數</strong>（尺寸、厚度、重量、容量、功率等）</li>
+<li><strong>功能賣點</strong>（產品描述中出現的特性）</li>
+<li><strong>認證與資質</strong>（CE、GREENGUARD、ISO、FDA 等）</li>
+<li><strong>價格區間與 MOQ</strong></li>
+<li><strong>所屬店鋪名稱與行業</strong></li>
+<li><strong>已有買家評價/評論</strong>（如有）</li>
+</ul>
+<blockquote>
+<p>如果連結為店鋪主頁而非商品頁，優先抓取首頁推薦商品的詳情。</p>
+</blockquote>
+<p>資訊讀取完成後，<strong>展示給使用者確認</strong>，格式如下：</p>
+<pre><code>【產品基礎資訊確認】
+- 產品名稱：xxx
+- 核心材質/成分：xxx
+- 關鍵規格：xxx
+- 已知認證：xxx
+- 行業/類目：xxx
+- 已有賣點描述：xxx（原文摘錄）
+</code></pre>
+<p>然後進入第三節，追問補充資訊。</p>
+<hr />
+<h2>三、收集補充經營資訊（必須向使用者提問）</h2>
+<p>展示以下問題，請使用者按需填寫（允許跳過不確定的項）：</p>
+<pre><code>為了生成更精準的商品賣點，請告訴我以下資訊（不確定的可跳過）：
+
+1. 產品最核心的&quot;獨特優勢&quot;是什麼？（和同行相比，你們的差異點在哪？）
+   例：100%全新料、0甲醛、專利鎖釦、自動化生產線、30天打樣
+
+2. 目標買家是哪類？（可多選）
+   □ 分銷商/批發商  □ 品牌商/私標買家  □ 工程總包/專案採購  □ 零售連鎖
+   □ 平臺賣家（Amazon/Shopify）  □ 其他：___
+
+3. 主攻哪些市場？
+   例：美國、歐洲、中東、東南亞、澳洲、南美
+
+4. 買家最常問的顧慮或投訴點是什麼？
+   例：顏色穩定性、發貨週期、小單能不能做、認證是否齊全
+
+5. 有哪些認證、檢測報告、專利？（請列出具體名稱）
+   例：SGS、CE、GREENGUARD Gold、ASTM F3261、ISO 9001
+
+6. 定製服務能力（OEM/ODM）：
+   □ 支援尺寸定製  □ 支援顏色/花色定製  □ 支援Logo/包裝定製
+   □ 最小定製起訂量：___ 件/㎡/套  □ 打樣週期：___ 天
+
+7. 服務承諾（可選填）：
+   例：30天交期、5步QC、Alibaba Trade Assurance、專屬客戶經理
+</code></pre>
+<p>使用者填寫後，整合進第四節輸出。若使用者跳過某項，在對應段落標註「待補充」並給出建議範圍。</p>
+<hr />
+<h2>四、黃金五段生成（核心執行節）</h2>
+<p>綜合前三節所有資訊，按以下五段結構，<strong>中英雙語</strong>完整輸出商品賣點。</p>
+<hr />
+<h3>4.1 第一段｜CVP — 核心價值主張</h3>
+<p><strong>定位</strong>：3秒抓住眼球，一句話講清"我是誰，為誰解決什麼核心問題"。</p>
+<p><strong>公式</strong>：</p>
+<blockquote>
+<p><code>[一句話定位]</code> + <code>[為"哪類買家"]</code> + <code>[解決"什麼痛點"]</code> + <code>[提供"什麼獨特價值"]</code></p>
+</blockquote>
+<p><strong>撰寫規則</strong>：<br />
+1. 必須點名目標買家身份（如 hotel developers / brand owners / EPC contractors）<br />
+2. 必須包含產品品類的行業最強差異詞（如 virgin material / EIR texture / patented lock）<br />
+3. 必須包含一個可量化的承諾或數字（如 91,870㎡ factory / 20+ certifications / 30-day OEM）<br />
+4. 英文版 ≤ 50 詞，中文版 ≤ 100 字<br />
+5. <strong>對AI友好</strong>：寫明產品類別、目標使用者、核心賣點關鍵詞，便於國際站AI檢索系統精準匹配買家</p>
+<p><strong>輸出格式</strong>：</p>
+<pre><code>【CVP · 核心價值主張】
+
+🇨🇳 中文版：
+xxx
+
+🇺🇸 英文版：
+xxx
+</code></pre>
+<hr />
+<h3>4.2 第二段｜KSP — 關鍵賣點矩陣</h3>
+<p><strong>定位</strong>：用重點提領方式，每一條遵循「特性+商業利益+證據」邏輯，輸出 4-6 條核心賣點。</p>
+<p><strong>公式（每條）</strong>：</p>
+<blockquote>
+<p><code>【賣點維度】：</code> <code>[特性描述(Feature)]</code>，為您的業務帶來<code>[商業利益(Benefit)]</code>。<code>[證據支撐(Evidence)]</code></p>
+</blockquote>
+<p><strong>參考維度（根據行業選取最相關的 4-6 個）</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">維度標籤</th>
+<th style="text-align: left;">適用場景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">【Material · 材料與品質】</td>
+<td style="text-align: left;">原料有差異化（全新料/有機/專利材料）時必選</td>
+</tr>
+<tr>
+<td style="text-align: left;">【Performance · 效能與效率】</td>
+<td style="text-align: left;">有可量化效能資料時必選（防水/耐磨/節能/承重）</td>
+</tr>
+<tr>
+<td style="text-align: left;">【Design · 設計與創新】</td>
+<td style="text-align: left;">外觀/工藝有明顯特色時選（EIR/異形/定製花色）</td>
+</tr>
+<tr>
+<td style="text-align: left;">【Certification · 認證體系】</td>
+<td style="text-align: left;">有多項國際認證時必選，合規壁壘場景尤為重要</td>
+</tr>
+<tr>
+<td style="text-align: left;">【Customization · 定製能力】</td>
+<td style="text-align: left;">提供 OEM/ODM 服務時必選</td>
+</tr>
+<tr>
+<td style="text-align: left;">【Delivery · 交期與產能】</td>
+<td style="text-align: left;">大廠/快交期/現貨優勢時選</td>
+</tr>
+<tr>
+<td style="text-align: left;">【Safety · 安全與合規】</td>
+<td style="text-align: left;">兒童品、食品接觸、建材、電器等合規敏感行業必選</td>
+</tr>
+<tr>
+<td style="text-align: left;">【Sustainability · 環保與可持續】</td>
+<td style="text-align: left;">歐美買家關注 ESG 時選</td>
+</tr>
+<tr>
+<td style="text-align: left;">【Price Value · 價效比】</td>
+<td style="text-align: left;">工廠直供/規模優勢時選（注意不要只講"cheap"）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>撰寫規則</strong>：<br />
+1. 每條賣點必須有 Evidence（認證編號、測試資料、客戶案例、平臺數字等），不得空泛<br />
+2. Benefit 必須站在買家商業利益角度（降低退貨率 / 提升終端滿意度 / 減少合規風險）<br />
+3. 不得使用空洞形容詞堆砌（如 high quality / best price / professional）<br />
+4. <strong>對AI友好</strong>：專業術語（認證名稱/行業標準/技術詞彙）保留英文原文，便於AI語義識別<br />
+5. 英文每條賣點 ≤ 80 詞，共 4-6 條</p>
+<p><strong>輸出格式</strong>：</p>
+<pre><code>【KSP · 關鍵賣點矩陣】
+
+✅ 【Material · 材料與品質】
+xxx（中文）
+xxx（English）
+
+✅ 【Performance · 效能與效率】
+xxx（中文）
+xxx（English）
+
+...（共 4-6 條）
+</code></pre>
+<hr />
+<h3>4.3 第三段｜ICP — 理想客戶畫像</h3>
+<p><strong>定位</strong>：直接告訴買家"這是為你定製的產品"，讓目標買家自我識別，同時過濾低質詢盤。</p>
+<p><strong>公式</strong>：</p>
+<blockquote>
+<p><code>本產品/解決方案特別適用於以下客戶及場景：[客戶型別1], [客戶型別2]... 在[應用場景1], [應用場景2]...</code></p>
+</blockquote>
+<p><strong>撰寫規則</strong>：<br />
+1. 必須列出 3-5 類目標買家，每類附上括號註明市場/場景（如 Middle East、USA、EU）<br />
+2. 可加一句"無論是新建專案還是改造升級，我們的產品都能……"的收尾語<br />
+3. <strong>對AI友好</strong>：寫出行業身份標籤（如 furniture manufacturer / EPC contractor / Amazon seller），AI Search在匹配買家詢盤時會優先推薦給帶此類身份標籤的買家<br />
+4. 英文版 ≤ 150 詞</p>
+<p><strong>輸出格式</strong>：</p>
+<pre><code>【ICP · 理想客戶畫像】
+
+🇨🇳 中文版：
+xxx
+
+🇺🇸 英文版：
+xxx
+</code></pre>
+<hr />
+<h3>4.4 第四段｜TSP — 信任與服務保障</h3>
+<p><strong>定位</strong>：我們不僅提供產品，更提供服務承諾。讓買家相信"選你不會翻車"。</p>
+<p><strong>公式</strong>：</p>
+<blockquote>
+<p><code>我們不僅提供產品，更提供[服務承諾]。我們的[服務流程]確保您的專案順利。我們擁有[資質認證]...</code></p>
+</blockquote>
+<p><strong>撰寫規則</strong>：<br />
+1. 必須包含至少 3 項具體服務承諾（打樣天數、QC道數、交期、售後響應時間）<br />
+2. 引用"solution"、"project manager"、"warranty"、"ISO9001"等詞彙，向AI證明供應商可靠性<br />
+3. 推薦用表格或 ✔ 條目列表呈現，視覺上便於掃讀<br />
+4. 如有 Alibaba Trade Assurance，必須寫明<br />
+5. 英文版 ≤ 120 詞</p>
+<p><strong>輸出格式</strong>：</p>
+<pre><code>【TSP · 信任與服務保障】
+
+🇨🇳 中文版：
+xxx
+
+🇺🇸 英文版：
+xxx
+</code></pre>
+<hr />
+<h3>4.5 第五段｜CTA — 精準行動號召</h3>
+<p><strong>定位</strong>：清晰的行動指令，降低買家行動門檻，引導其立刻發起詢盤。</p>
+<p><strong>公式</strong>：</p>
+<blockquote>
+<p><code>為滿足不同需求，我們提供... 立即[行動指令1]，獲取[價值1]！或[行動指令2]，獲取[價值2]！</code></p>
+</blockquote>
+<p><strong>撰寫規則</strong>：<br />
+1. 必須提供 2-3 個不同行動路徑（樣品、報價、專案方案），滿足不同階段買家需求<br />
+2. 每個行動必須有時間承諾（如 "within 24 hours" / "in 5 business days"）<br />
+3. 使用動詞開頭（Get / Request / Send / Click）<br />
+4. 清晰的行動指令有助於引導買家瞭解更多商品&amp;公司實力資訊，提升頁面停留與詢盤意願<br />
+5. 英文版 ≤ 80 詞</p>
+<p><strong>輸出格式</strong>：</p>
+<pre><code>【CTA · 精準行動號召】
+
+🇨🇳 中文版：
+xxx
+
+🇺🇸 英文版：
+xxx
+</code></pre>
+<hr />
+<h2>五、字元統計與精簡建議</h2>
+<p>五段全部輸出完成後，必須進行以下操作：</p>
+<h3>5.1 字元計數</h3>
+<p>統計英文版五段合計字元數，並輸出以下表格：</p>
+<pre><code>| 段落 | 英文字元數 | 狀態 |
+|:---|:---|:---|
+| CVP（01） | xxx | ✅ / ⚠️ |
+| KSP（02） | xxx | ✅ / ⚠️ |
+| ICP（03） | xxx | ✅ / ⚠️ |
+| TSP（04） | xxx | ✅ / ⚠️ |
+| CTA（05） | xxx | ✅ / ⚠️ |
+| 合計 | xxx / 2000 | ✅ 達標 / ⚠️ 超限 |
+</code></pre>
+<h3>5.2 精簡建議（若超過2000字元）</h3>
+<p>若合計超過2000字元，必須提供一版「精簡版」方案：</p>
+<p><strong>精簡優先順序（從低到高保留）</strong>：<br />
+1. 首先縮減 KSP：從 6 條減為 4 條，保留差異化最強的維度<br />
+2. 其次縮減 TSP：將表格改為一句話精簡版<br />
+3. CVP、ICP、CTA 儘量不動（買家決策漏斗關鍵節點）</p>
+<p>精簡版必須同步輸出，格式：</p>
+<pre><code>【精簡版（≤2000字元）· 可直接貼上至國際站】
+
+---
+[精簡後的完整英文五段文案]
+---
+</code></pre>
+<hr />
+<h2>六、檔案儲存與使用說明</h2>
+<h3>6.1 儲存檔案</h3>
+<p>輸出完成後，將完整的中英雙語五段文案儲存為 Markdown 檔案：<br />
+- 檔名格式：<code>[產品名稱]-商品賣點黃金五段.md</code><br />
+- 儲存在工作目錄中<br />
+- 告知使用者檔案路徑</p>
+<h3>6.2 必須告知使用者的使用建議</h3>
+<p>輸出完成後，必須追加以下使用說明：</p>
+<pre><code>📌 國際站填寫指引：
+
+① 進入商品詳情編輯頁 → 「商品賣點」填寫框（最多2000字元）
+② 貼上上方【精簡版英文文案】（若未超限則貼上完整版）
+③ 中文版建議用於：
+   - 產品詳情頁內嵌文案
+   - 詢盤迴復模板
+   - 展會宣傳物料
+
+⚠️ 三大注意事項：
+- 認證名稱、資料（尺寸/厚度/面積）必須與實際產品一致，填寫前請核實
+- 客戶案例/買家數量等社會證明資料，確認真實後再填入
+- 定期更新（每季度一次），結合新認證/新市場同步修改賣點
+</code></pre>
+<h3>6.3 完成後主動追問</h3>
+<p>輸出完成後，提供以下擴充套件選項讓使用者選擇：</p>
+<blockquote>
+<p>"賣點文案已完成。接下來您需要：<br />
+- <strong>A. 基於賣點生成詳情頁配套圖片</strong>（對應每段內容出一張視覺圖）<br />
+- <strong>B. 針對另一款產品套用同一框架</strong>（快速複製，只需補充該產品差異資訊）<br />
+- <strong>C. 生成配套的詢盤迴復話術</strong>（把賣點轉化為銷售對話語言）<br />
+- <strong>D. 翻譯為其他語言版本</strong>（西班牙語/阿拉伯語/法語，針對特定市場）"</p>
+</blockquote>
+<hr />
+<h2>七、行業適配參考表</h2>
+<p>不同行業的 KSP 維度側重與核心認證參考：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">行業</th>
+<th style="text-align: left;">必選KSP維度</th>
+<th style="text-align: left;">高價值認證關鍵詞</th>
+<th style="text-align: left;">目標買家型別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>建材（地板/板材/瓷磚）</strong></td>
+<td style="text-align: left;">Material + Performance + Certification + Customization</td>
+<td style="text-align: left;">GREENGUARD Gold, CE, FloorScore, ISO 14001, A2 fire rating</td>
+<td style="text-align: left;">Hotel developer, EPC contractor, flooring brand owner</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>家居（傢俱/燈具/裝飾）</strong></td>
+<td style="text-align: left;">Design + Safety + Customization + Sustainability</td>
+<td style="text-align: left;">BIFMA, CPSC, California Prop 65, CARB P2, EN71</td>
+<td style="text-align: left;">Interior designer, furniture chain, Amazon brand</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>服裝/紡織</strong></td>
+<td style="text-align: left;">Material + Sustainability + Customization + Delivery</td>
+<td style="text-align: left;">OEKO-TEX STANDARD 100, GOTS, BSCI, GRS, bluesign</td>
+<td style="text-align: left;">Brand owner, private label buyer, retail chain</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>電子/電器</strong></td>
+<td style="text-align: left;">Performance + Safety + Certification + Customization</td>
+<td style="text-align: left;">CE, FCC, RoHS, UL, KC, PSE, SAA</td>
+<td style="text-align: left;">Distributor, Amazon seller, retail buyer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>化工/塗料</strong></td>
+<td style="text-align: left;">Material + Safety + Performance + Sustainability</td>
+<td style="text-align: left;">REACH, EPA, VOC-compliant, ISO 9001, UN/DOT transport</td>
+<td style="text-align: left;">Industrial buyer, construction contractor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>食品/保健品</strong></td>
+<td style="text-align: left;">Material + Safety + Certification + Sustainability</td>
+<td style="text-align: left;">FDA, HACCP, BRC, IFS, Organic, Halal, Kosher</td>
+<td style="text-align: left;">Food importer, health brand, supermarket chain</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>美妝/個護</strong></td>
+<td style="text-align: left;">Design + Safety + Customization + Sustainability</td>
+<td style="text-align: left;">FDA, EU Cosmetics Regulation, ISO 22716, cruelty-free, vegan</td>
+<td style="text-align: left;">Beauty brand, private label buyer, spa chain</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>五金/工業</strong></td>
+<td style="text-align: left;">Performance + Material + Delivery + Price Value</td>
+<td style="text-align: left;">ISO 9001, SGS, CE, DIN, ASTM</td>
+<td style="text-align: left;">OEM manufacturer, engineering firm, MRO buyer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>汽車配件</strong></td>
+<td style="text-align: left;">Performance + Safety + Certification + Customization</td>
+<td style="text-align: left;">IATF 16949, ROHS, ECE, DOT, OEM-grade</td>
+<td style="text-align: left;">Auto parts distributor, vehicle manufacturer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>母嬰/玩具</strong></td>
+<td style="text-align: left;">Safety + Material + Certification + Design</td>
+<td style="text-align: left;">EN71, ASTM F963, CPSIA, REACH, BPA-free</td>
+<td style="text-align: left;">Toy importer, baby brand, retail chain</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>八、執行規範</h2>
+<ol>
+<li><strong>語言</strong>：全程使用中文與使用者溝通，賣點文案中英雙語對照輸出</li>
+<li><strong>資料誠實性</strong>：所有數字/認證必須來自使用者提供或連結抓取的真實資訊，無法確認的必須標註「待核實」，不得自行捏造</li>
+<li><strong>字元控制</strong>：英文版合計嚴格控制在 ≤2000 字元，超限時必須給出精簡版</li>
+<li><strong>禁止空洞詞彙</strong>：禁止使用 "high quality / best price / competitive price / professional supplier / one-stop solution" 等無差異化詞彙，必須替換為具體資料或特性</li>
+<li><strong>檔案輸出</strong>：最終文案必須儲存為 .md 檔案，不要僅在對話中展示</li>
+<li><strong>AI友好寫法</strong>：所有段落中，產品類別名稱（英文）、目標買家身份、認證名稱（英文原文）、行業技術術語，必須以英文寫出並保留在正文中，這是國際站AI檢索系統識別和匹配買家的核心訊號</li>
+<li><strong>進度提示</strong>：每完成一段，告知使用者進度（如「✓ CVP完成，正在撰寫KSP關鍵賣點矩陣...」）</li>
+<li><strong>分步確認</strong>：第三節收集使用者資訊時必須等待使用者回覆，不得自行假設填入</li>
+<li><strong>跨產品複用</strong>：同一客戶的不同產品，CVP/ICP/TSP/CTA 結構可複用，重點更新 KSP 中的維度資料</li>
+<li><strong>最終黃金法則</strong>：<code>【資料為王】+【利益導向（降本/增效/提升品牌形象/規避風險）】+【結構制勝】+【關鍵詞佈局（核心詞/長尾詞/技術詞等）】+【換位思考】</code></li>
+</ol></section>

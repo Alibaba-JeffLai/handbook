@@ -1,0 +1,66 @@
+<section class="bpart" id="f0"><h3 class="bpart-h">品牌战略skill_安装提示词_发给对方.md</h3><h1>阿里國際站品牌戰略全案 Skill — 安裝與使用（發給對方商家）</h1>
+<blockquote>
+<p>配套檔案：<code>alibaba-brand-strategy-v1.1.0.zip</code>（4 個檔案，已脫敏，無任何他人商家隱私）。<br />
+適用：Accio Work / asource 環境，已繫結阿里巴巴國際站賬號的商家。</p>
+</blockquote>
+<hr />
+<h2>這個 Skill 能幫你做什麼</h2>
+<p>輸入你的國際站店鋪 URL，自動產出一份<strong>互動式 HTML 品牌戰略全案</strong>，含：<br />
+- 競爭分析 + 品牌定位 + 品牌屋（Brand House）<br />
+- 完整首頁 7 大模組文案 + 詳情頁 6 個 Zone 文案（英文文案 + 中文批註）<br />
+- 強制審計附錄（13 條防幻覺鐵律 + 二次實測複核），<strong>每個數字可追溯、不誇大、不冤枉自己也不虛標</strong></p>
+<p>核心特點：<strong>13 條防資料幻覺鐵律 + 二次獨立實測複核</strong>，確保交付物裡的每個事實都經得起買家核驗。</p>
+<hr />
+<h2>第一步：安裝 Skill（三選一）</h2>
+<h3>方式 A：讓 AI 自動裝（最簡單）</h3>
+<p>把 <code>alibaba-brand-strategy-v1.1.0.zip</code> 拖進 Accio Work 對話方塊，然後發：</p>
+<pre><code>幫我把這個 zip 裡的 alibaba-brand-strategy skill 安裝到我的 agent 技能目錄，裝好告訴我。
+</code></pre>
+<h3>方式 B：手動解壓</h3>
+<p>把 zip 解壓後，將整個 <code>alibaba-brand-strategy/</code> 資料夾放到你的 agent 技能目錄：</p>
+<pre><code>&lt;你的 agent&gt;/agent-core/skills/alibaba-brand-strategy/
+</code></pre>
+<p>確保該目錄下有：<code>SKILL.md</code>、<code>ONBOARDING.md</code>、<code>reference/</code>（含 2 個 .md）。</p>
+<h3>方式 C：已有技能管理介面</h3>
+<p>在技能管理裡匯入 zip 即可，skill 名 = <code>alibaba-brand-strategy</code>。</p>
+<hr />
+<h2>第二步：使用（無冷啟動版 · 複製一句即可啟動）</h2>
+<blockquote>
+<p>你<strong>不需要先填一堆引數</strong>。只給店鋪 URL，skill 自己用後臺資料 + 瀏覽器實測把能查的全查出來，查完只就真正查不到的幾項追問你。</p>
+</blockquote>
+<p>把下面這段複製進對話方塊，<strong>只改 <code>xxx</code> 為你的店鋪名</strong>：</p>
+<pre><code>按 alibaba-brand-strategy skill（v1.1）為我做阿里巴巴國際站品牌戰略全案，店鋪URL = 【https://xxx.en.alibaba.com】。
+
+執行要求：
+1. 先讀 SKILL.md 全部 13 條鐵律 + reference/case-anonymized-brand-strategy.md 實戰範本 + reference/mcp-interfaces.md。
+2. Phase 0 別讓我填表——你先用 MCP supplier_verification_recall 把店鋪基礎畫像（評分/認證/年限/成立年/廠房/員工/類目）全拉出來，再用 browser 子代理實測主頁/productlist/company_profile（認證證書號/線上交易額+口徑/準時率/SKU/明星單品sold）。查完後，只就【你確實查不到的事實】用 ask_user(form) 追問我：① 官網展示的品牌客戶是否真實+是否授權展示 ② 認證實際狀態（已有含證書號/申請中/沒有）③ 工廠能力（打樣週期/交期/QC AQL/色準/工藝/MOQ/月產能）。其餘一律按實測資料走，缺的標 [⚠️需確認]。
+3. 全程執行 13 條鐵律，特別是：鐵律11口徑一致才能比較（交易額必須抄頁面時間口徑，口徑不同禁判&quot;誇大/矛盾&quot;）、鐵律12禁記憶幻覺（每個A級數字必須本輪工具呼叫支撐，頁面vs MCP衝突以頁面為準）、鐵律13最危險3-5數字（年份/證書號/交易額/SKU/sold）必須二次獨立實測復現。
+4. Phase 7 強制審計必做，含 7.4 二次實測複核 + 審計附錄 A-G 七子節（G=二次實測複核表）。
+5. 交付：互動式 HTML 單檔案（Chart.js 內聯離線可用），含戰略分析+完整首頁7模組文案+詳情頁6Zone文案+審計附錄。英文文案+中文批註。A類(可釋出)/B類(需確認)分標。
+</code></pre>
+<p>之後你<strong>唯一要做的</strong>：把 <code>xxx</code> 換成真實店鋪名，再回答 skill 查完後彈出的 3 個追問表單。無需預先準備任何資料。</p>
+<hr />
+<h2>收到報告後 13 項快速驗收</h2>
+<ol>
+<li>HTML 導航欄有"審計附錄"入口</li>
+<li>審計附錄 A/B/C/D/E/F/<strong>G</strong> 七子節完整（G=二次實測複核）</li>
+<li>Ctrl+F「⚠️」確認能力引數都有標註</li>
+<li>"Since"年份用了可驗證的保守年份</li>
+<li>品牌客戶展示有授權確認標註</li>
+<li>審計附錄 B 節數學校驗有結論</li>
+<li>競品表每家有獨立 URL</li>
+<li>品牌屋 Proof Points 每條可追溯資料來源</li>
+<li>首頁文案區分 A 類(可釋出)/B 類(需確認)</li>
+<li>無"零事故/從未/行業第一"等絕對性未驗證宣告</li>
+<li><strong>口徑一致</strong>：交易額有時間口徑標註；任何"誇大/矛盾/墊底"定性的兩數同口徑</li>
+<li><strong>二次實測複核</strong>：附錄 G 列出年份/證書號/交易額/SKU/sold 第一輪 vs 二次實測值+結論</li>
+<li><strong>無記憶幻覺</strong>：每個 A 級數字來自本輪工具呼叫；頁面 vs MCP 衝突以頁面為準</li>
+</ol>
+<hr />
+<h2>常見問題</h2>
+<p><strong>Q：會不會亂編資料？</strong><br />
+A：13 條鐵律就是專門防這個的。所有數字標 A+/A/B/C/D 級（A+=後臺介面、A=瀏覽器實測、C=商家自述、D=推斷），最危險的 3-5 個數字還會做二次獨立實測複核，對不上就降級"待確認"，絕不硬寫。</p>
+<p><strong>Q：需要我提供哪些資料？</strong><br />
+A：只要店鋪 URL。skill 自己查後臺+實測頁面，只追問它確實查不到的 3 類事實（品牌授權 / 認證狀態 / 工廠能力）。</p>
+<p><strong>Q：要裝在哪個環境？</strong><br />
+A：能呼叫阿里國際站後臺 MCP 的 Accio Work / asource agent。沒有後臺許可權時 skill 會降級為純頁面實測 + 你補充資訊。</p></section><section class="bpart"><h3 class="bpart-h">附件檔案</h3><ul class="filelist"><li>alibaba-brand-strategy-v1.1.0.zip <span class="kb">25.4 KB</span></li></ul></section>

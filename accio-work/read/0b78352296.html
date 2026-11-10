@@ -1,0 +1,250 @@
+<section class="bpart" id="f0"><h3 class="bpart-h">cross-border-product-research/SKILL.md</h3><div class="fm"><b>cross-border-product-research</b><p>跨境電商選品分析與熱門品類報告生成器。當使用者提到選品分析、品類報告、跨境電商市場研究、熱門品類、藍海產品、出口資料分析、海外市場調研時使用。輸入任意產品品類名稱，自動完成11維度深度調研並生成圖文並茂的HTML視覺化報告（含ECharts互動圖表）。</p></div><h1>跨境電商選品分析報告生成器</h1>
+<h2>觸發場景</h2>
+<p>當使用者請求以下內容時自動觸發：<br />
+- 某個品類的跨境電商選品分析<br />
+- 熱門品類報告生成<br />
+- 出口市場調研<br />
+- 藍海產品推薦<br />
+- 平臺熱銷榜單分析<br />
+- 提到"選品"、"品類報告"、"跨境分析"等關鍵詞</p>
+<h2>輸入引數</h2>
+<p>使用者需提供：<strong>產品品類名稱</strong>（如"汽車零配件"、"家居用品"、"寵物用品"等）</p>
+<p>可選引數：<br />
+- 目標市場（預設全球）<br />
+- 報告語言（預設中文）<br />
+- 重點關注維度</p>
+<h2>執行流程</h2>
+<h3>Phase 1: 多源資料採集</h3>
+<p>使用 WebSearch 工具並行採集以下11個維度資料：</p>
+<p><strong>搜尋策略</strong>：每個維度至少搜尋3-5個關鍵片語合（中英文混合），確保資料覆蓋面。</p>
+<table>
+<thead>
+<tr>
+<th>維度</th>
+<th>搜尋關鍵詞模板</th>
+<th>資料目標</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.市場規模</td>
+<td>"{品類} global market size 2026" / "{品類}跨境電商市場規模"</td>
+<td>GMV、YoY增速、ASP</td>
+</tr>
+<tr>
+<td>2.出口資料</td>
+<td>"中國{品類}出口 海關資料 HS編碼" / "浙江省{品類}出口"</td>
+<td>出口額、國家分佈、HS編碼TOP5</td>
+</tr>
+<tr>
+<td>3.產業帶</td>
+<td>"中國{品類}產業帶 分佈 企業數量"</td>
+<td>城市、企業數、優勢</td>
+</tr>
+<tr>
+<td>4.需求熱度</td>
+<td>"{品類} TikTok trending" / "{品類} google trends" / "alibaba {品類} inquiry"</td>
+<td>社媒熱度、詢盤增長、熱搜詞TOP10</td>
+</tr>
+<tr>
+<td>5.平臺榜單</td>
+<td>"Amazon best seller {品類}" / "TikTok Shop {品類}熱銷" / "Temu {品類}"</td>
+<td>各平臺TOP10產品</td>
+</tr>
+<tr>
+<td>6.藍海品</td>
+<td>"{品類}外貿藍海產品" / "{品類} blue ocean niche"</td>
+<td>藍海推薦、藍海指數</td>
+</tr>
+<tr>
+<td>7.熱搜詞</td>
+<td>"阿里國際站{品類}熱搜詞" / "alibaba {品類} trending keywords"</td>
+<td>TOP20搜尋增長關鍵詞</td>
+</tr>
+<tr>
+<td>8.供應鏈</td>
+<td>"1688 {品類} 跨境專供" / "淘寶 {品類} 批發"</td>
+<td>供應商連結、價格區間</td>
+</tr>
+<tr>
+<td>9.買家畫像</td>
+<td>"{品類}海外買家畫像" / "{品類} buyer persona"</td>
+<td>買家型別、區域偏好</td>
+</tr>
+<tr>
+<td>10.出口資質</td>
+<td>"{品類}出口認證 DOT CE SASO"</td>
+<td>各區域認證要求</td>
+</tr>
+<tr>
+<td>11.出口政策</td>
+<td>"{品類}出口退稅率" / "{品類}出口政策支援"</td>
+<td>退稅率、支援政策</td>
+</tr>
+</tbody>
+</table>
+<h3>Phase 2: 資料整理與分析</h3>
+<p>將採集資料按以下結構整理：</p>
+<pre><code>research_data = {
+  market: { gmv, yoy, asp, regional_breakdown },
+  export: { total_value, countries_top10, hs_codes_top5, zhejiang_data },
+  industrial_belt: [{ city, enterprises, advantages, categories }],
+  demand_signals: { social_media, b2b_inquiry, google_trends, hot_terms_top10 },
+  platform_rankings: { amazon, tiktok_shop, shein, temu, dtc_sites },
+  blue_ocean: [{ product, index, market_size, competition, growth }],
+  hot_keywords: [{ keyword, growth_rate, category }],
+  supply_chain: [{ category, platform, search_url, price_range, location }],
+  buyer_profile: { by_platform, by_region },
+  certifications: { usa, europe, southeast_asia, middle_east, africa, asia_other },
+  policies: { tax_rebate, support_policies, tariff_risks }
+}
+</code></pre>
+<h3>Phase 3: 生成HTML視覺化報告</h3>
+<p>生成單檔案HTML報告，包含以下特性：</p>
+<h4>技術棧</h4>
+<ul>
+<li>ECharts 5.x（CDN引入）用於互動式圖表</li>
+<li>純CSS實現響應式佈局和美觀樣式</li>
+<li>無外部依賴，可離線瀏覽</li>
+</ul>
+<h4>報告結構模板</h4>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;[品類名稱]跨境電商選品分析報告&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        /* 設計規範見下方 */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 報告封面/Header --&gt;
+    &lt;!-- 目錄導航 --&gt;
+    &lt;!-- 11個維度章節 --&gt;
+    &lt;!-- 資料來源與免責宣告 --&gt;
+    &lt;script&gt;
+        /* ECharts圖表初始化 */
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4>設計規範</h4>
+<p><strong>配色方案</strong>（商務科技風）：</p>
+<pre><code class="language-css">:root {
+    --primary: #1a73e8;        /* 主色-科技藍 */
+    --primary-dark: #1557b0;   /* 深藍 */
+    --secondary: #34a853;      /* 輔色-增長綠 */
+    --warning: #fbbc04;        /* 警示黃 */
+    --danger: #ea4335;         /* 風險紅 */
+    --bg-main: #f8f9fa;        /* 背景色 */
+    --bg-card: #ffffff;        /* 卡片白 */
+    --text-primary: #202124;   /* 主文字 */
+    --text-secondary: #5f6368; /* 次文字 */
+    --border: #e8eaed;         /* 邊框 */
+}
+</code></pre>
+<p><strong>佈局要求</strong>：<br />
+- 左側固定導航欄（目錄錨點跳轉）<br />
+- 右側主內容區域，卡片式佈局<br />
+- 每個章節一個卡片，帶圓角陰影<br />
+- 頂部報告封面含品類名稱、日期、核心指標卡片<br />
+- 底部資料來源列表</p>
+<p><strong>圖表規劃</strong>（必須包含）：</p>
+<table>
+<thead>
+<tr>
+<th>章節</th>
+<th>圖表型別</th>
+<th>ECharts圖表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>市場規模</td>
+<td>柱狀圖+折線圖</td>
+<td>近5年GMV趨勢 + 區域佔比餅圖</td>
+</tr>
+<tr>
+<td>出口資料</td>
+<td>地圖/柱狀圖</td>
+<td>出口國家分佈柱狀圖 + HS編碼TOP5橫向條形圖</td>
+</tr>
+<tr>
+<td>產業帶</td>
+<td>表格</td>
+<td>產業帶資訊表格（帶樣式）</td>
+</tr>
+<tr>
+<td>需求熱度</td>
+<td>雷達圖/條形圖</td>
+<td>各平臺熱度對比雷達圖 + 熱搜詞詞雲效果</td>
+</tr>
+<tr>
+<td>平臺榜單</td>
+<td>表格</td>
+<td>分Tab展示各平臺產品表格</td>
+</tr>
+<tr>
+<td>藍海品</td>
+<td>氣泡圖</td>
+<td>競爭度vs增長率氣泡圖（氣泡大小=市場規模）</td>
+</tr>
+<tr>
+<td>熱搜詞</td>
+<td>橫向條形圖</td>
+<td>搜尋增長率TOP20條形圖</td>
+</tr>
+<tr>
+<td>供應鏈</td>
+<td>表格</td>
+<td>供應商資訊表格（含連結）</td>
+</tr>
+<tr>
+<td>買家畫像</td>
+<td>餅圖/桑基圖</td>
+<td>買家型別分佈餅圖 + 區域偏好</td>
+</tr>
+<tr>
+<td>出口資質</td>
+<td>表格</td>
+<td>分割槽域認證要求表格</td>
+</tr>
+<tr>
+<td>出口政策</td>
+<td>資訊卡片</td>
+<td>退稅率高亮卡片 + 政策時間線</td>
+</tr>
+</tbody>
+</table>
+<p><strong>表格樣式</strong>：<br />
+- 斑馬紋行<br />
+- 懸停高亮<br />
+- 固定表頭<br />
+- 關鍵資料加粗/彩色標記</p>
+<p><strong>響應式</strong>：<br />
+- 桌面端：左側導航 + 右側內容<br />
+- 移動端：頂部摺疊導航 + 全寬內容</p>
+<h3>Phase 4: 輸出檔案</h3>
+<p>將HTML檔案儲存到輸出目錄，檔案命名規則：<br />
+<code>{品類名稱}_跨境電商選品報告_{日期}.html</code></p>
+<p>使用 present_files 工具呈現給使用者。</p>
+<h2>關鍵注意事項</h2>
+<ol>
+<li><strong>資料時效性</strong>：搜尋時務必加入當前年份關鍵詞，確保資料為最新</li>
+<li><strong>多源驗證</strong>：關鍵資料（市場規模、增長率）至少2個來源交叉驗證</li>
+<li><strong>中英文搜尋</strong>：每個維度同時使用中英文關鍵詞搜尋，擴大資料覆蓋</li>
+<li><strong>資料標註</strong>：報告中所有資料標註來源，增強可信度</li>
+<li><strong>圖表互動</strong>：ECharts圖表保留tooltip、legend篩選等互動功能</li>
+<li><strong>單檔案完整</strong>：所有CSS/JS內聯，確保離線可用（ECharts透過CDN載入）</li>
+<li><strong>使用Task工具並行調研</strong>：將11個維度拆分為3-4個Task並行執行，提升效率</li>
+</ol>
+<h2>示例呼叫</h2>
+<p>使用者輸入：<code>幫我做一份寵物用品的跨境電商選品分析報告</code></p>
+<p>執行步驟：<br />
+1. 確認品類：寵物用品<br />
+2. 啟動並行資料採集（3-4個Task agent）<br />
+3. 整合資料<br />
+4. 生成HTML報告<br />
+5. 輸出檔案並呈現</p></section>
